@@ -5,6 +5,7 @@
   "description": "OERPUB integration in Symfony2",
   "keywords": ["oerpub"],
   "homepage": "https://github.com/epuig83/oerpubBundle",
+  "language":  "php",
   "license": "MIT",
   "authors": [
     {
@@ -13,7 +14,8 @@
       "homepage": "https://github.com/epuig83/oerpubBundle"
     }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
+  "prefer-stable":true,
   "require": {
     "symfony/twig-bundle": "~2.1|~3.0",
     "symfony/framework-bundle": "~2.1|~3.0",
