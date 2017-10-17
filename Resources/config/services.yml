@@ -1,0 +1,9 @@
+services:
+  oerpub.service:
+       class:  oerpub\oerpubBundle\Services\OerpubManagerRegistry
+       arguments: ["@doctrine","@service_container"]
+  oerpub.twig_extension:
+       class:  oerpub\oerpubBundle\Twig\OerpubExtension
+       public: false
+       tags:
+          - { name: twig.extension }
