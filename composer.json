@@ -1,16 +1,16 @@
 {
-  "name": "epuig83/oerpub",
+  "name": "epuig83/oerpubBundle",
   "version":"1.0.0",
   "type": "symfony-bundle",
   "description": "OERPUB integration in Symfony2",
   "keywords": ["oerpub"],
-  "homepage": "https://github.com/epuig83/oerpub",
+  "homepage": "https://github.com/epuig83/oerpubBundle",
   "license": "MIT",
   "authors": [
     {
       "name": "Edgard Puig",
       "email": "edgard@fadosProduccions.com",
-      "homepage": "https://github.com/epuig83/oerpub"
+      "homepage": "https://github.com/epuig83/oerpubBundle"
     }
   ],
   "minimum-stability": "dev",
@@ -23,7 +23,7 @@
   "autoload": {
     "psr-4": { "oerpub\\oerpubBundle\\": "" }
   },
-  "target-dir":"epug83/oerpub",
+  "target-dir":"epug83/oerpubBundle",
   "extra": {
     "branch-alias": {
       "dev-master": "1.0.x-dev"
