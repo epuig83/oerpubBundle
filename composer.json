@@ -1,5 +1,5 @@
 {
-  "name": "epuig83/oerpubBundle",
+  "name": "epuig83/oerpub-bundle",
   "version":"1.0.0",
   "type": "symfony-bundle",
   "description": "OERPUB integration in Symfony2",
