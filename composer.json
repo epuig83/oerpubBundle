@@ -10,7 +10,7 @@
   "authors": [
     {
       "name": "Edgard Puig",
-      "email": "edgard@fadosProduccions.com",
+      "email": "edgard@fados-produccions.com",
       "homepage": "https://github.com/epuig83/oerpubBundle"
     }
   ],
@@ -23,7 +23,7 @@
     "doctrine/collections": ">=1.0"
   },
   "autoload": {
-    "psr-4": { "oerpubBundle\\": "" }
+    "psr-4": { "oerpub\\oerpubBundle\\": "" }
   },
   "extra": {
     "branch-alias": {
