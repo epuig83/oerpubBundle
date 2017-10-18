@@ -20,7 +20,7 @@ class OerpubExtension extends \Twig_Extension
         );
     }
 
-    public function fullCalendar()
+    public function oerpub()
     {
         return "
     <div id=\"ie6-container-wrap\">
