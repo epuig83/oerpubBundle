@@ -8,7 +8,7 @@
     <mapped-superclass name="oerpub\oerpubBundle\Entity\Event">
 
         <field name="title" column="title" type="string" length="255" nullable="true"/>
-        <field name="content" column="content" type="string" length="255" nullable="true"/>
+        <field name="content" column="content" type="text" nullable="true"/>
         <field name="createDatetime" column="createDatetime" type="datetime" nullable="false"/>
         <field name="modifyDatetime" column="modifyDatetime" type="datetime" nullable="false"/>
     </mapped-superclass>
