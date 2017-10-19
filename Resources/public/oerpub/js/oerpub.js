@@ -47,11 +47,7 @@ Aloha.ready(function(){
                                     if(data){
                                         var _elem = jQuery.parseJSON(data);
                                     }
-                                    if ( typeof _elem != 'undefined' && null !== _elem.id ){
-                                        save_url = Routing.generate('save_oerpub', { id: _elem.id });
-                                    }else{
-                                        save_url = Routing.generate('save_new_oerpub');
-                                    }
+                                    save_url = Routing.generate('oerpub_save');
 
                                     $('#statusmessage').data('message')('Saved');
                                     GenericButton.getButtons()["save"].enable(false);
