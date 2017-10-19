@@ -25,7 +25,7 @@ class OerpubManagerRegistry
         return $this->manager;
     }
 
-    public function saveAction($newCreateData,$newModifyData,$content,$id) {
+    public function saveDocument($newCreateData,$newModifyData,$content,$id) {
         $entity = $this->manager->getRepository($this->recipient)->find($id);
         $entity->setCreateDatetime(new \DateTime($newCreateData));
         $entity->setModifyDatetime(new \DateTime($newModifyData));

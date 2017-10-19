@@ -17,12 +17,13 @@ class OerpubController extends Controller
 
         if ($request->isXmlHttpRequest()) { // aseguramos que proviene de AJAX
             $post_content = $this->get('request')->request->all();
-            $content = $em->getRepository("AppBundle:ContingutAgil")->findOneById($id);
-            $content->setContingut($post_content['html']);
+            //$content = $em->getRepository("AppBundle:ContingutAgil")->findOneById($id);
+            //$content->setContingut($post_content['html']);
+            $this->get('oerpub.service')->saveDocument(date('m/d/Y h:i:s a', time()),date('m/d/Y h:i:s a', time()),$post_content['html'],$id);
             $em->flush();
         }
 
-        $response = array("code" => 100, "success" => true, "id" =>$id);
+        $response = array("code" => 201, "success" => true, "id" =>$id);
         return new Response(json_encode($response));
     }
 }
