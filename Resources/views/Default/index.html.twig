@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>oerpub editor - {% block title %}{% endblock %}</title>
+    <!--metal:base-macro define-macro="base"-->
+    <!--metal:base-slot define-slot="base"-->
+    <!-- Empty for demo -->
+    <!--/metal:base-slot-->
+    <!--/metal:base-macro-->
+    <!--metal:css_macro define-macro="css"-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/src/css/aloha.css') }}"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" href="{{ asset('oerpub/bower_components/bootstrap/dist/css/bootstrap.css') }}" type="text/css"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/bootstrap.css') }}"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/aloha.css') }}"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/html5_metacontent.css') }}"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/html5_content_in_oerpub.css') }}"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/style.css') }}"> <!-- xhtml --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/toolbar.css') }}"> <!-- xhtml --></link>
+    <link rel="stylesheet" href="{{ asset('oerpub/bower_components/font-awesome/css/font-awesome.css') }}"/>
+    <!--/metal:css_macro-->
+    <!--metal:js_macro define-macro="javascript"-->
+    <script src="{{ asset('oerpub/oerpub/js/jquery-1.7.1.min.js') }}"> <!-- xhtml --></script>
+    <script src="{{ asset('oerpub/oerpub/js/jquery.center.js') }}"> <!-- xhtml --></script>
+    <!-- FOS Js Routing -->
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"> <!-- xhtml --></script>
+    <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+    <!-- Aloha editor -->
+    <script type="text/javascript" src="{{ asset('oerpub/src/lib/require.js') }}"> <!-- xhtml workaround --></script>
+    <script src="{{ asset('oerpub/oerpub/js/jquery-ui-1.9.0.custom-aloha.js') }}"> <!-- xhtml --></script>
+
+
+    <!-- Mathjax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-MML-AM_HTMLorMML-full&amp;delayStartupUntil=configured"> <!-- xhtml --></script>
+
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+              jax: ["input/MathML", "input/TeX", "input/AsciiMath", "output/NativeMML", "output/HTML-CSS"],
+              extensions: ["asciimath2jax.js","tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js","MathEvents.js","toMathML.js"],
+              tex2jax: { inlineMath: [["[TEX_START]","[TEX_END]"], ["\\(", "\\)"]] },
+              // Apparently we can't change the escape sequence for ASCIIMath (MathJax doesn't find it)
+              // asciimath2jax: { inlineMath: [["[ASCIIMATH_START]", "[ASCIIMATH_END]"]], },
+
+              TeX: {
+                extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"], noErrors: { disabled: true }
+              },
+              AsciiMath: { noErrors: { disabled: true } }
+            });</script>
+
+    <script type="text/javascript" src="{{ asset('oerpub/oerpub/js/aloha-settings.js') }}"> <!-- xhtml workaround --></script>
+    <script type="text/javascript" src="{{ asset('oerpub/bower_components/bootstrap/dist/js/bootstrap.js') }}"> <!-- xhtml workaround --></script>
+    <script type="text/javascript" src="{{ asset('oerpub/src/lib/aloha.js') }}"
+            data-aloha-plugins="common/ui,
+                                    oer/copy,
+                                    oer/toolbar,
+                                    oer/overlay,
+                                    oer/format,
+                                    oer/figure,
+                                    common/contenthandler,
+                                    common/paste,
+                                    common/block,
+                                    common/list,
+                                    oer/table,
+                                    oer/math,
+                                    oer/mathcheatsheet,
+                                    extra/draganddropfiles,
+                                    common/image,
+                                    oer/figure,
+                                    oer/assorted,
+                                    oer/title,
+                                    common/undo,
+                                    oer/undobutton,
+                                    oer/genericbutton,
+                                    oer/semanticblock,
+                                    oer/exercise,
+                                    oer/quotation,
+                                    oer/equation,
+                                    oer/example,
+                                    oer/note"> <!-- xhtml workaround -->
+    </script>
+    <script type="text/javascript"
+            tal:content="string:var save_url = '${request.route_url('preview_save')}';">
+        var save_url = Routing.generate('save_new_oerpub');
+    </script>
+    <script type="text/javascript" src="{{ asset('oerpub/js/oerpub.js') }}" />
+    <!-- Custom styles for this template -->
+    {% block css %}
+    {% endblock %}
+<body>
+    {{ oerpub() }}
+
+    {% block javascript %}{% endblock %}
+</body>
+</html>
