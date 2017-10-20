@@ -4,7 +4,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="oerpub_save" pattern="/oerpub/load">
+    <route id="oerpub_save" path="/oerpub/save">
         <default key="_controller">oerpubBundle:Oerpub:save</default>
         <option key="expose">true</option>
     </route>

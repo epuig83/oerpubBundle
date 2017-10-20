@@ -13,25 +13,25 @@
     <!--/metal:base-slot-->
     <!--/metal:base-macro-->
     <!--metal:css_macro define-macro="css"-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/src/css/aloha.css') }}"> <!-- xhtml workaround --></link>
-    <link rel="stylesheet" href="{{ asset('oerpub/bower_components/bootstrap/dist/css/bootstrap.css') }}" type="text/css"> <!-- xhtml workaround --></link>
-    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/bootstrap.css') }}"> <!-- xhtml workaround --></link>
-    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/aloha.css') }}"> <!-- xhtml workaround --></link>
-    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/html5_metacontent.css') }}"> <!-- xhtml workaround --></link>
-    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/html5_content_in_oerpub.css') }}"> <!-- xhtml workaround --></link>
-    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/style.css') }}"> <!-- xhtml --></link>
-    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpub/css/toolbar.css') }}"> <!-- xhtml --></link>
-    <link rel="stylesheet" href="{{ asset('oerpub/bower_components/font-awesome/css/font-awesome.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpubBundle/public/css/aloha.css') }}"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" href="{{ asset('oerpub/oerpubBundle/public/bower_components/bootstrap/dist/css/bootstrap.css') }}" type="text/css"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpubBundle/public/oerpub/css/bootstrap.css') }}"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpubBundle/public/oerpub/css/aloha.css') }}"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpubBundle/public/oerpub/css/html5_metacontent.css') }}"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpubBundle/public/oerpub/css/html5_content_in_oerpub.css') }}"> <!-- xhtml workaround --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpubBundle/public/oerpub/css/style.css') }}"> <!-- xhtml --></link>
+    <link rel="stylesheet" type="text/css" href="{{ asset('oerpub/oerpubBundle/public/oerpub/css/toolbar.css') }}"> <!-- xhtml --></link>
+    <link rel="stylesheet" href="{{ asset('oerpub/oerpubBundle/public/bower_components/font-awesome/css/font-awesome.css') }}"/>
     <!--/metal:css_macro-->
     <!--metal:js_macro define-macro="javascript"-->
-    <script src="{{ asset('oerpub/oerpub/js/jquery-1.7.1.min.js') }}"> <!-- xhtml --></script>
-    <script src="{{ asset('oerpub/oerpub/js/jquery.center.js') }}"> <!-- xhtml --></script>
+    <script src="{{ asset('oerpub/oerpubBundle/public/oerpub/js/jquery-1.7.1.min.js') }}"> <!-- xhtml --></script>
+    <script src="{{ asset('oerpub/oerpubBundle/public/oerpub/js/jquery.center.js') }}"> <!-- xhtml --></script>
     <!-- FOS Js Routing -->
     <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"> <!-- xhtml --></script>
     <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
     <!-- Aloha editor -->
-    <script type="text/javascript" src="{{ asset('oerpub/src/lib/require.js') }}"> <!-- xhtml workaround --></script>
-    <script src="{{ asset('oerpub/oerpub/js/jquery-ui-1.9.0.custom-aloha.js') }}"> <!-- xhtml --></script>
+    <script type="text/javascript" src="{{ asset('oerpub/oerpubBundle/public/src/lib/require.js') }}"> <!-- xhtml workaround --></script>
+    <script src="{{ asset('oerpub/oerpubBundle/public/oerpub/js/jquery-ui-1.9.0.custom-aloha.js') }}"> <!-- xhtml --></script>
 
 
     <!-- Mathjax -->
@@ -50,9 +50,9 @@
               AsciiMath: { noErrors: { disabled: true } }
             });</script>
 
-    <script type="text/javascript" src="{{ asset('oerpub/oerpub/js/aloha-settings.js') }}"> <!-- xhtml workaround --></script>
-    <script type="text/javascript" src="{{ asset('oerpub/bower_components/bootstrap/dist/js/bootstrap.js') }}"> <!-- xhtml workaround --></script>
-    <script type="text/javascript" src="{{ asset('oerpub/src/lib/aloha.js') }}"
+    <script type="text/javascript" src="{{ asset('oerpub/oerpubBundle/public/oerpub//js/aloha-settings.js') }}"> <!-- xhtml workaround --></script>
+    <script type="text/javascript" src="{{ asset('oerpub/oerpubBundle/public/bower_components/bootstrap/dist/js/bootstrap.js') }}"> <!-- xhtml workaround --></script>
+    <script type="text/javascript" src="{{ asset('oerpub/oerpubBundle/public/src/lib/aloha.js') }}"
             data-aloha-plugins="common/ui,
                                     oer/copy,
                                     oer/toolbar,
@@ -85,7 +85,7 @@
             tal:content="string:var save_url = '${request.route_url('preview_save')}';">
         var save_url = Routing.generate('save_new_oerpub');
     </script>
-    <script type="text/javascript" src="{{ asset('oerpub/js/oerpub.js') }}" />
+    <script type="text/javascript" src="{{ asset('oerpub/oerpubBundle/public/oerpub/js/oerpub.js') }}" />
     <!-- Custom styles for this template -->
     {% block css %}
     {% endblock %}
