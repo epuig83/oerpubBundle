@@ -17,9 +17,9 @@ class OerpubExtension extends \Twig_Extension
         );
     }
 
-    public function oerpub()
+    public function oerpub(Twig_Environment $env)
     {
-        return $twig->render('oerpub:Default:index.html.twig');
+        return $env->render('oerpub:Default:index.html.twig');
     }
 
     public function getName() 
